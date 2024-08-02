@@ -1,0 +1,26 @@
+ <!-- <option value="" selected>------Choisir Agence------</option>
+            <option value="ANTANANARIVO">ANTANANARIVO</option>
+            <option value="CESSNA IVATO">CESSNA IVATO</option>
+            <option value="ANTALAHA">ANTALAHA</option>
+            <option value="FORT DAUPHIN">FORT D'AUPHIN</option>
+            <option value="AMBATOVY">AMBATOVY</option>
+            <option value="TAMATAVE">TAMATAVE</option>
+            <option value="RENTAL">RENTAL</option>
+            <option value="PNEUMATIQUE-OUTILLAGE-LUBRIF">PNEUMATIQUE-OUTILLAGE-LUBRIF</option>
+            <option value="ADMINISTRATION">ADMINISTRATION</option>
+            <option value="COMM ENERGIE">COMM ENERGIE</option>
+            <option value="ENERGIE DURABLE">ENERGIE DURABLE</option>
+            <option value="ENERGIE JIRAMA">ENERGIE JIRAMA</option>
+            <option value="HFF TRAVEL AIRWAYS">HFF TRAVEL AIRWAYS</option>
+            <option value="HFF TRAVEL SERVICE">HFF TRAVEL SERVICE</option>
+            <option value="SAMA MANUTENTION">SAMA MANUTENTION</option>
+            <option value="SMR ASSOCIATES SA">SMR ASSOCIATES SA</option>
+            <option value="SOMAVA">SOMAVA</option>
+            <option value="NATEMA">NATEMA</option>
+            <option value="SOMECA">SOMECA</option>
+            <option value="SEYCHELLES">SEYCHELLES</option> -->
+
+
+
+            // include('../agence/afficheAgenceTraitement.php');
+            // include('../agenceService/agenceServiceAffichage.php');

@@ -1,0 +1,21 @@
+.formSelect{
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+#text {
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    margin-left: 160px;
+}
+.margin-left-330{
+    margin-left: 330px;
+}
+.container {
+    width: 1000px;
+    height: 1000px;
+    border: 5px;
+}

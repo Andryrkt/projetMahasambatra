@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="accueil.css">
+</head>
+<body>
+   <div class="header">
+   <p><a href="../allUsers/insertUserForm.php">Gestion User</a></p> 
+   <p><a href="../allUsers/afficheUserListeTraitement.php">Liste des utilisateurs</a></p>
+   </div>
+    <h1>accueil</h1>
+</body>
+</html>
