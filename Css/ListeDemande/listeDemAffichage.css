@@ -1,0 +1,76 @@
+
+/* entête */
+.btn-no-border {
+    border: none !important;
+}
+
+.form-control{
+    border:none;
+}
+
+.form-select{
+    box-shadow: 0px 8px 20px 0px lightgray;
+}
+.form-check-input{
+    box-shadow: 0px 8px 20px 0px lightgray;
+}
+
+/*body */
+body {
+    background-color:rgb(248, 248, 248);
+}
+
+/* tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+header {
+    position: relative;
+    height: 170px;
+}
+
+
+/* menu deroulant du bouton action */
+.btn-group{
+    position: relative;
+}
+
+
+.dropdown-menu {
+    display: none; /* Initialement caché */
+    position: absolute;
+    bottom: 100%; /* Positionne le menu au-dessus du bouton */
+    left: 0;
+    background: white; /* Assurez-vous que le fond est visible */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour plus de visibilité */
+    z-index: 1000; /* Assurez-vous qu'il se superpose au bouton */
+    margin-left: 60px;
+}
+
+
+.dropdown-menu button{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px 40px;
+    border:0px;
+    list-style-type: none;
+    /* background-color: inherit;fond de son élément parent direct */
+}
+
+.btn-group:hover .dropdown-menu {
+    display: block;/*apparaître le menu déroulant.*/
+
+}
+.dropdown-menu:hover{
+    background-color:white;
+}
+
+.margin-left {
+    margin-left: 800px;
+}
+
+

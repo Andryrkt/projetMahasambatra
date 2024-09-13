@@ -1,0 +1,53 @@
+/* image */
+.background-image {
+    filter: blur(6px);
+  }
+
+/* partie du champ */
+.transparent-field{
+    background-color: transparent !important;
+}
+
+/* partie du login header */
+.login-container {
+    box-shadow: 10px 10px 20px rgb(250, 246, 246); /*Ombre légère*/
+    position: relative;/*pour suivre login header avec login-container*/
+}
+  .login-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: 140px;
+    height: 70px;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .login-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 whitesmoke;
+  }
+  .login-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 0 0 0 whitesmoke; 
+  }
+  
+   
