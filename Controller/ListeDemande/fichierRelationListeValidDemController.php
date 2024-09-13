@@ -5,9 +5,6 @@ include_once '../../Model/LoginValidateur/validateurStatDemModel.php';
 
 $conn = obtenirConnexionBD();
 
-
-    
-
     // Récupération des paramètres
     $id = isset($_GET['id']); // Si ID est manquant, il est null
     $validateur_id = isset($_SESSION['validateur_id']);
@@ -68,8 +65,8 @@ $users = obtenirDemandesApprovisionnement();
 // include_once '../statut/statutDemAffichageModel.php';
 // $results = obtenirDescriptionStatutDem($user);
 include_once __DIR__ .DIRECTORY_SEPARATOR.'../../Controller/Statut/statutValidationDemController.php';
-// header("Location: ../../View/ListeDemande/listeDemApproAffichageForm.php");
-// exit;
+header("Location: ../../View/ListeDemande/listeDemApproAffichageForm.php");
+exit;
 
 
 

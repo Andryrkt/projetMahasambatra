@@ -18,60 +18,160 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-warning  border border-5 border-white w-75 p-4 mx-auto">
-        <div class="container-fluid ">
-            <div class="col-2">
-                <img src="../../image/logoHFF.jpg" class="img-fluid" alt="Logo">
+     <!-- navigation bar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-warning border border-5 border-white w-75 p-4 mx-auto">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../../image/logoHFF.jpg" class="img-fluid" alt="Logo" style="max-height: 40px;">
+            </a>
+
+            <!-- Navbar Toggle for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- Demande d'approvisionnement -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownDemande" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Demande d'approvisionnement
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownDemande">
+                            <li><a class="dropdown-item" href="../Demande/demApproForm.php">Nouvelle demande</a></li>
+                            <li><a class="dropdown-item" href="../ListeDemande/listeDemApproAffichageForm.php">Liste de demande</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Agence/Service -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownAgenceService" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Agence/Service
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAgenceService">
+                            <li><a class="dropdown-item" href="../Service/ajoutServiceForm.php">Ajout service</a></li>
+                            <li><a class="dropdown-item" href="../AgenceService/ajoutAgenceServiceForm.php">Ajout Agence/service</a></li>
+                            <li><a class="dropdown-item" href="../AgenceService/afficherAgenceServListeForm.php">Liste des agences/services</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Categorie -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownCategorie" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorie
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategorie">
+                            <li><a class="dropdown-item" href="../Categorie/ajoutCategorieForm.php">Ajout categorie</a></li>
+                            <li><a class="dropdown-item" href="../Categorie/afficherCategorieListeForm.php">Liste des Categories</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Utilisateur -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownUtilisateur" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Utilisateur
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisateur">
+                            <li><a class="dropdown-item" href="../Utilisateur/insertionUtilisateurForm.php">Ajout utilisateur</a></li>
+                            <li><a class="dropdown-item" href="../Utilisateur/afficherUtilisateurListeForm.php">Liste des Utilisateurs</a></li>
+                            <li><a class="dropdown-item" href="../Utilisateur/afficherValidateurListeForm.php">Liste des validateurs</a></li>
+                            <li><a class="dropdown-item" href="../Utilisateur/afficherAdminListeForm.php">Liste des administrateurs</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-
-            <div class="header bg-transparent d-flex justify-content-center gap-4">
-                <!-- demande d'approvisionnement -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
-                        Demande d'approvisionnement
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Demande/demApproForm.php">Nouvelle demande</a></li>
-                        <li><a class="dropdown-item" href="../ListeDemande/listeDemApproAffichageForm.php">Liste de demande</a></li>
-                </div>
-
-                <!-- Agence service -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
-                        Agence/Service
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Service/ajoutServiceForm.php">Ajout service</a></li>
-                        <li><a class="dropdown-item" href="../AgenceService/ajoutAgenceServiceForm.php">Ajout Agence/service</a></li>
-                        <li><a class="dropdown-item" href="../AgenceService/afficherAgenceServListeForm.php">Liste des agences/services</a></li>
-                </div>
-
-                <!-- categorie -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Categorie/ajoutCategorieForm.php">Ajout categorie</a></li>
-                        <li><a class="dropdown-item" href="../Categorie/afficherCategorieListeForm.php">Liste des Categories</a></li>
-                </div>
-
-                <!-- utilisateur -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
-                        Utilisateur
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Utilisateur/insertionUtilisateurForm.php">Ajout utilisateur</a></li>
-                        <li><a class="dropdown-item" href="../Utilisateur/afficherUtilisateurListeForm.php">Liste des Utilisateurs</a></li>
-                        <li><a class="dropdown-item" href="../Utilisateur/afficherValidateurListeForm.php">Liste des validateurs</a></li>
-                        <li><a class="dropdown-item" href="../Utilisateur/afficherAdminListeForm.php">Liste des administrateurs</a></li>
-                </div>
+        </div>
     </nav>
 
+    <div class="container bg-white mt-5 p-4 rounded-3">
+        <h2 class="text-center mb-4">Ajout utilisateur</h2>
+        <hr class="border border-dark border-1 opacity-25 mb-4">
 
-    <div class="container bg-white mt-5 p-5 rounded-top-3">
-        <h2 class="text-center">Ajout user</h2>
+        <form action="../../Controller/Utilisateur/insertionUtilisateurController.php" method="post">
+            <div class="row mb-3 ">
+                <div class="col-12 col-md-5 ">
+                    <label class="form-label" for="nom">Nom</label>
+                    <input class="form-control p-3" type="text" placeholder="Enter name user" name="nom" id="nom" required>
+                </div>
+                <div class="col-12 col-md-5 offset-md-1">
+                    <label for="agence" class="form-label">Agence</label>
+                    <select class="form-select p-3" name="agence" id="agenceSelect">
+                        <option selected value="">------Choisir Agence------</option>
+                        <?php foreach ($agences as $value) { ?>
+                            <option value="<?= htmlspecialchars($value['nom']) ?>"><?= htmlspecialchars($value['nom']) ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-md-5">
+                    <label class="form-label" for="prenom">Prénom</label>
+                    <input class="form-control p-3" type="text" placeholder="Enter first name user" name="prenom" id="prenom" required>
+                </div>
+                <div class="col-12 col-md-5 offset-md-1">
+                    <label for="service" class="form-label">Service</label>
+                    <select class="form-select p-3" name="service" id="serviceSelect" onchange="updateService()">
+                        <option selected value="">------Choisir Service------</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3 ">
+                <div class="col-12 col-md-5">
+                    <label for="mdp" class="form-label">Mot de passe</label>
+                    <input type="password p-3" class="form-control" name="mdp" id="mdp" placeholder="Password" autocomplete="off" required>
+                </div>
+                <div class="col-12 col-md-5 offset-md-1">
+                    <label for="userRole" class="form-label">Rôle</label>
+                    <select class="form-select p-3" name="userRole" id="userRole">
+                        <option selected value="">------Choisir Rôle------</option>
+                        <?php if ($role === 'admin') { ?>
+                            <option value="utilisateur">Utilisateur</option>
+                            <option value="validateur">Validateur</option>
+                            <option value="admin">Administrateur</option>
+                        <?php } elseif ($role === 'validateur') { ?>
+                            <option value="utilisateur">Utilisateur</option>
+                            <option value="validateur">Validateur</option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3 ">
+                <div class="col-12 col-md-5">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email p-4" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre email avec qui que ce soit.</small>
+                </div>
+                <div class="col-12 col-md-5 offset-md-1">
+                    <div id="statutContainer" style="display: none;">
+                        <label for="statut" class="form-label">Statut</label>
+                        <select class="form-select p-3" name="statut" id="statut">
+                            <option selected value="">------Choisir statut------</option>
+                            <option value="APPROUV">À APPROUVER</option>
+                            <option value="ENCOURS APPR">STOCK</option>
+                            <option value="ENCOURS ACHAT">ACHAT DIRECT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-warning rounded-pill">Ajouter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- <div class="container bg-white mt-5 p-5 rounded-top-3">
+        <h2 class="text-center">Ajouter utilisateur</h2>
         <hr class="border border-dark border-1 opacity-25">
 
         <form action="../../Controller/Utilisateur/insertionUtilisateurController.php" method="post">
@@ -111,9 +211,6 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
                     <label for="userRole" class="col-form-label col-form-label-lg mt-4">Rôle</label>
                     <select class="form-select p-3 w-75 rounded-4" name="userRole" id="userRole">
                         <option selected value="">------Choose User Role------</option>
-                        <!-- <option value="utilisateur">Utilisateur</option>
-                            <option value="validateur">Validateur</option>
-                            <option value="admin">Administrateur</option> -->
                         <?php if ($role === 'admin') { ?>
                             <option value="utilisateur">Utilisateur</option>
                             <option value="validateur">Validateur</option>
@@ -151,7 +248,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <!-- script js -->
     <script src="../../js/Utilisateur/insertUserForm.js"></script>

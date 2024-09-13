@@ -163,10 +163,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
 
     // Vérification de la méthode de la requête
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         // Vérification de la présence du bouton 'action'
-        if (isset($_POST['action'])) {
-            $action = $_POST['action']; // Obtenir l'action depuis le formulaire
+        if (isset($_GET['action'])) {
+            $action = $_GET['action']; // Obtenir l'action depuis le formulaire
             $current_statut = getCurrentStatut($conn, $id);
 
             // Assurer que l'ID est valide et existe dans la base de données

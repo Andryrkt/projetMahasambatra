@@ -182,26 +182,8 @@ $userRole = $_SESSION['role'];
                 <?php foreach ($users as $user) : ?>
                     <tr>
                         <td class="text-center align-middle">
-                            <div class="btn-group dropup">
-                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Action</button>
-                                <ul class="dropdown-menu">
-                                <?php if ($userRole === 'admin' || $userRole === 'validateur') : ?>
-                                        <button class="btn-valider">
-                                            <a href="../LoginValidateur/loginValidateurForm.php?id=<?php echo htmlspecialchars($user['id']); ?>" class="list-group-item list-group-item-action">Valider</a>
-                                        </button> <br>
-                                        <form action="" method="POST" style="display:inline;">
-                                            <input type="hidden" name="id" value="<?php echo htmlspecialchars($user['id']); ?>">
-                                            <button type="submit" name="btn_delete" class="btn-supprimer">Supprimer</button>
-                                        </form>
-                                        
-                                    <?php endif; ?>
-                                    </ul>                      
-                            </div>
-
-
-
-
-                            <div class="btn-group ">
+                          
+                            <div class="btn-group position-relative">
                                 <button class="btn-action bg-warning rounded-3 p-2 border border-5 border-white" type="button">Action</button>
                                 <div class="action-dropdown rounded-5 ">
                                     <?php if ($userRole === 'admin' || $userRole === 'validateur') : ?>

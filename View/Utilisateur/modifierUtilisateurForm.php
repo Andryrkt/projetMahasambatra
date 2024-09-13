@@ -17,56 +17,75 @@ checkAccess(['admin', 'validateur']);
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-warning  border border-5 border-white w-75 p-4 mx-auto">
-        <div class="container-fluid ">
-            <div class="col-2">
-                <img src="../../image/logoHFF.jpg" class="img-fluid" alt="Logo">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning border border-5 border-white w-75 p-4 mx-auto">
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../../image/logoHFF.jpg" class="img-fluid" alt="Logo" style="max-height: 40px;">
+            </a>
+
+            <!-- Navbar Toggle for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <!-- Demande d'approvisionnement -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownDemande" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Demande d'approvisionnement
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownDemande">
+                            <li><a class="dropdown-item" href="../Demande/demApproForm.php">Nouvelle demande</a></li>
+                            <li><a class="dropdown-item" href="../ListeDemande/listeDemApproAffichageForm.php">Liste de demande</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Agence/Service -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownAgenceService" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Agence/Service
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAgenceService">
+                            <li><a class="dropdown-item" href="../Service/ajoutServiceForm.php">Ajout service</a></li>
+                            <li><a class="dropdown-item" href="../AgenceService/ajoutAgenceServiceForm.php">Ajout Agence/service</a></li>
+                            <li><a class="dropdown-item" href="../AgenceService/afficherAgenceServListeForm.php">Liste des agences/services</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Categorie -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownCategorie" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorie
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategorie">
+                            <li><a class="dropdown-item" href="../Categorie/ajoutCategorieForm.php">Ajout categorie</a></li>
+                            <li><a class="dropdown-item" href="../Categorie/afficherCategorieListeForm.php">Liste des Categories</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Utilisateur -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownUtilisateur" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Utilisateur
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisateur">
+                            <li><a class="dropdown-item" href="../Utilisateur/insertionUtilisateurForm.php">Ajout utilisateur</a></li>
+                            <li><a class="dropdown-item" href="../Utilisateur/afficherUtilisateurListeForm.php">Liste des Utilisateurs</a></li>
+                            <li><a class="dropdown-item" href="../Utilisateur/afficherValidateurListeForm.php">Liste des validateurs</a></li>
+                            <li><a class="dropdown-item" href="../Utilisateur/afficherAdminListeForm.php">Liste des administrateurs</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-
-            <div class="header bg-transparent d-flex justify-content-center gap-4">
-                <!-- demande d'approvisionnement -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-                        Demande d'approvisionnement
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Demande/demApproForm.php">Nouvelle demande</a></li>
-                        <li><a class="dropdown-item" href="../ListeDemande/listeDemApproAffichageForm.php">Liste de demande</a></li>
-                </div>
-
-                <!-- Agence service -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-                        Agence/Service
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Service/ajoutServiceForm.php">Ajout service</a></li>
-                        <li><a class="dropdown-item" href="../AgenceService/ajoutAgenceServiceForm.php">Ajout Agence/service</a></li>
-                        <li><a class="dropdown-item" href="../AgenceService/afficherAgenceServListeForm.php">Liste des agences/services</a></li>
-                </div>
-
-                <!-- categorie -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Categorie/ajoutCategorieForm.php">Ajout categorie</a></li>
-                        <li><a class="dropdown-item" href="../Categorie/afficherCategorieListeForm.php">Liste des Categories</a></li>
-                </div>
-
-                <!-- utilisateur -->
-                <div class="btn-group dropend">
-                    <button type="button" class="btn btn-transparent btn-no-border dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
-                        Utilisateur
-                    </button>
-                    <ul class="dropdown-menu my-4">
-                        <li><a class="dropdown-item" href="../Utilisateur/insertionUtilisateurForm.php">Ajout utilisateur</a></li>
-                        <li><a class="dropdown-item" href="../Utilisateur/afficherUtilisateurListeForm.php">Liste des Utilisateurs</a></li>
-                        <li><a class="dropdown-item" href="../Utilisateur/afficherValidateurListeForm.php">Liste des validateurs</a></li>
-                        <li><a class="dropdown-item" href="../Utilisateur/afficherAdminListeForm.php">Liste des administrateurs</a></li>
-                </div>
+        </div>
     </nav>
+
 
 
 

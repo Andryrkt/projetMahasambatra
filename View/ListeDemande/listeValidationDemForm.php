@@ -159,12 +159,11 @@ $user = obtenirDemParId($id);
                    
                 <!-- Boutons pour faire la validation -->
                 <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-                <button type="submit"class="btn btn-outline-dark" name="action" value="valider">
-                    <a href="../../Controller/ListeDemande/fichierRelationListeValidDemController.php?id=<?= $user['id'] ?>">Valider</a>
-                </button>
-                    <button type="submit" class="btn btn-warning" name="action" value="stock_insuffisant">Signaler Stock Insuffisant</button>
-                    <button type="submit" class="btn btn-dark" name="action" value="achat">Achat Direct</button>
-                    <button type="submit" class="btn btn-outline-warning" name="action" value="annuler">Annuler</button>
+               
+                    <a href="../../Controller/ListeDemande/fichierRelationListeValidDemController.php?id=<?= $user['id'] ?>&action=valider" class="btn btn-warning" >Valider</a>
+                    <a  href="../../Controller/ListeDemande/fichierRelationListeValidDemController.php?id=<?= $user['id'] ?>&action=stock_insuffisant" class="btn btn-warning"  >Signaler Stock Insuffisant</a>
+                    <a  href="../../Controller/ListeDemande/fichierRelationListeValidDemController.php?id=<?= $user['id'] ?>&action=achat" class="btn btn-dark">Achat Direct</a>
+                    <a   href="../../Controller/ListeDemande/fichierRelationListeValidDemController.php?id=<?= $user['id'] ?>&action=annuler" class="btn btn-outline-warning">Annuler</a>
                 </div>
             </form>
         </div>
