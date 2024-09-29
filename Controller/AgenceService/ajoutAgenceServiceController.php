@@ -23,8 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['nouvelleAgence']) && 
     // Ajouter les services associés à l'agence
     ajoutAgenceService($selectServices, $agenceId, $ajoutAgence);
         echo "L'agence et les services ont été ajoutés avec succès.";
-        
-       
 }
 
 // Appeler la fonction pour afficher tous les services

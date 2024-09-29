@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" /> 
-    <link rel="stylesheet" href="Css/Login/login.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-</head>
-
-<body>
-    <div class="background-container d-flex align-items-center justify-content-center min-vh-100">
+<?php ob_start(); ?>
+<div class="background-container d-flex align-items-center justify-content-center min-vh-100">
         <div class="background-image position-absolute w-100 h-100" style="background: url('image/wheel-excavator-coal-joystick-controls.webp') no-repeat center center; background-size: cover; z-index: -1;"></div>
         <div class="form-container">
             <form action="Controller/Login/loginController.php" method="post" class="login-container bg-transparent p-4 rounded-4  border border-4 border-light p-5">
@@ -22,15 +9,16 @@
             </form>
         </div>
     </div>
-    <!-- script -->
-    <script src="js/Login/login.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <?php $content = ob_get_clean(); ?>
 
-</body>
-</html>
-
-
-
-
-
-
+    <?php 
+        $title = "Connexion";
+        $stylesheets = [
+            "assets/css/login/login.css", // Ajoute ici le chemin vers ton fichier CSS
+        ];
+        $scripts = [
+            "assets/js/login/login.js", // Ajoute ici le chemin vers ton fichier JS
+        ];
+    
+    ?>
+<?php require(__DIR__ .DIRECTORY_SEPARATOR.'/../layout.php') ?>

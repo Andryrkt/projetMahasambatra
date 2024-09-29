@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Si l'URL ne contient pas /Public/, rediriger vers Public
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Si aucun fichier ou dossier n'existe, rediriger vers Public/index.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.\*)$ index.php [QSA,L]

@@ -1,0 +1,14 @@
+{
+    "name": "andry/projet-mahasambatra",
+    "autoload": {
+        "psr-4": {
+            "Andry\\ProjetMahasambatra\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mahasambatra"
+        }
+    ],
+    "require": {}
+}
